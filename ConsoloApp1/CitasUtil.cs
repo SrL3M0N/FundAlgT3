@@ -40,7 +40,7 @@ namespace ConsoloApp1
             citas[totalCitas] = cita;
             totalCitas++;
 
-            Console.WriteLine("Cita creada con éxito.");
+            Console.WriteLine("Cita se ha creado con éxito.");
         }
 
     }
