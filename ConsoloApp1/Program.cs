@@ -26,12 +26,12 @@ namespace GestionCitasMedicas
                 {
                     case 1:
 
-                        CitaUtil.CrearCita(citas, ref totalCitas);
+                        CitasUtil.CrearCita(citas, ref totalCitas);
                         break;
 
                     case 2:
 
-                        CitaUtil.ListarCitas(citas, totalCitas);
+                        CitasUtil.ListarCitas(citas, totalCitas);
                         break;
 
                     case 3:
@@ -40,7 +40,7 @@ namespace GestionCitasMedicas
                         string textoBuscar = Console.ReadLine();
                         Console.Write("Ingrese el texto de reemplazo: ");
                         string textoReemplazo = Console.ReadLine();
-                        CitaUtil.ModificarMasivoUniversidad(citas, totalCitas, textoBuscar, textoReemplazo);
+                        CitasUtil.ModificarMasivoUniversidad(citas, totalCitas, textoBuscar, textoReemplazo);
                         break;
 
                     case 4:

@@ -42,6 +42,61 @@ namespace ConsoloApp1
 
             Console.WriteLine("Cita se ha creado con éxito.");
         }
+        public static void ListarCitas(Cita[] citas, int totalCitas)
+        {
+            if (totalCitas == 0)
+            {
+                Console.WriteLine("No hay citas registradas.");
+                return;
+            }
+
+            double sumaPrecios = 0;
+
+            Console.WriteLine("Listado de Citas Médicas:");
+            for (int i = 0; i < totalCitas; i++)
+            {
+                
+                Console.WriteLine($"Número de Cita: {citas[i].Num}");
+                Console.WriteLine($"Enfermedad: {citas[i].Enf}");
+                Console.WriteLine($"Nombre del Estudiante: {citas[i].Estudiante.Nom}");
+                Console.WriteLine($"Universidad: {citas[i].Estudiante.Uni}");
+                Console.WriteLine($"Precio: {citas[i].Pre:C}");
+                Console.WriteLine();  
+
+                
+                sumaPrecios += citas[i].Pre;
+            }
+
+            
+            Console.WriteLine($"Total de precios: {sumaPrecios:C}");
+        }
+        public static void ModificarMasivoUniversidad(Cita[] citas, int totalCitas, string textoBuscar, string textoReemplazo)
+        {
+            bool modificacionRealizada = false;
+
+            
+            for (int i = 0; i < totalCitas; i++)
+            {
+                
+                if (citas[i].Estudiante.Uni.Contains(textoBuscar))
+                {
+                    
+                    citas[i].Estudiante.Uni = citas[i].Estudiante.Uni.Replace(textoBuscar, textoReemplazo);
+                    modificacionRealizada = true;
+                }
+            }
+
+           
+            if (modificacionRealizada)
+            {
+                Console.WriteLine("Las universidades fueron modificadas correctamente.");
+            }
+            else
+            {
+                Console.WriteLine("No se encontraron universidades que coincidan con el texto de búsqueda.");
+            }
+        }
+
 
     }
 }

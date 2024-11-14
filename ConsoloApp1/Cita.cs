@@ -15,7 +15,7 @@ namespace ConsoloApp1
 
         public override string ToString()
         {
-            return $"Número: {Num}, Enfermedad: {Enf}, Estudiante: {Estudiante.Nombre}, Universidad: {Estudiante.Universidad}, Precio: {Pre}";
+            return $"Número: {Num}, Enfermedad: {Enf}, Estudiante: {Estudiante.Nom}, Universidad: {Estudiante.Uni}, Precio: {Pre}";
         }
     }
 
